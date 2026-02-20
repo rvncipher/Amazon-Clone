@@ -2,7 +2,7 @@
 
 - Create instance, using 'launch instance'
 - put details
-- select 'key' (create new or use old).
+- select 'key' (create new or use old, its like a password to your instance).
 
 
 ## Commands for deploying static site
@@ -24,7 +24,7 @@ history
   set http and https in inbound setting
   go to wizard for it.
 
-## 2. Creating Image (AMI)
+# 2. Creating Image (AMI)
   We create images, when there is more load. So we can divert the traffic. (although for static sites, AWS Auto Scaling is used. For automatic creations, and also Kubernetes EKS)
 
   - right click on deployed instance
@@ -35,17 +35,22 @@ history
   - done
 
 
-## 3. Creating Volume and attaching it
+# 3. Creating Volume and attaching it
 
 if more volume is needed, We use Elastic Block Storage (EBS).
 
 - go to EBS, create volume
 - select the configuration as per need;
-- In Tags sections ~ Provide key as 'Name' and then Value as "Volume_name";
+- In Tags sections ~ Provide **key** as *'Name'* and then **Value** as *"Volume_name"*;
 - create volume
-- select the volume and then attach it to needed instance;
+- select the volume and then **Attach** it to needed instance;
 
-After the use user can detach the volume.
+After the use user can *detach* the volume.
+
+# 4. AWS Auto Scaling and Load Balancer
+
+ 
+
 
 
 
@@ -61,3 +66,6 @@ After the use user can detach the volume.
   Can we connect multiple Volume to one instance?
 ## Ans 2:
   Yes, we can connect multiple to one instance.
+
+## Ques 3:
+  
